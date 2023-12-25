@@ -27,7 +27,7 @@ rm -rf package/luci-i18n-cpufreq-zh-cn
 
 # 设置启动项
 # sed -i '/exit 0/i\# 启动WIFI\nnohup sleep 60 && /sbin/wifi up &' package/base-files/files/etc/rc.local
-cat << 'EOF' >> /etc/rc.local
+cat << 'EOF' >> package/base-files/files/etc/rc.local
 # 系统优化配置
 sysctl -w net.ipv4.icmp_echo_ignore_all=1
 sysctl -w net.ipv4.tcp_tw_reuse=1
@@ -84,4 +84,6 @@ sysctl -w net.ipv4.tcp_congestion_control=bbr
 echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq)
 echo $max_freq > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+
+exit 0
 EOF
