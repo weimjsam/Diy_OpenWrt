@@ -26,7 +26,7 @@ rm -rf package/luci-app-cpufreq
 rm -rf package/luci-i18n-cpufreq-zh-cn
 
 # 设置启动项
-# sed -i '/exit 0/i\# 启动WIFI\nnohup sleep 60 && /sbin/wifi up &' package/base-files/files/etc/rc.local
+sed -i '/exit 0/d' package/base-files/files/etc/rc.local
 cat << 'EOF' >> package/base-files/files/etc/rc.local
 # 系统优化配置
 sysctl -w net.ipv4.icmp_echo_ignore_all=1
