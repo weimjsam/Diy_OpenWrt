@@ -1,13 +1,11 @@
 # 云编译 OpenWrt 固件
 
 **项目说明**：
-- 本项目使用 Github Actions 下载 [lede](https://github.com/coolsnowwolf/lede.git) 的 `Openwrt` 源码仓库，进行云编译。
-- 本项目同时编译5.4内核、5.15内核、6.0内核固件
-- 本项目编译固件适配 X86_64架构软路由
-- 本项目编译固件后台地址：192.168.2.9 管理员：root  初始密码：password
+- 本项目使用 Github Actions 下载 `Openwrt` 源码仓库，进行云编译。
+- 本项目编译固件后台地址：192.168.1.1 管理员：root  初始密码：password
 
 
-**本项目编译的固件做了如下更改**：（**打勾项**默认**编译**入固件）
+**本项目编译的固件额外配置**
 - 主题插件:
 - [x] luci-theme-argon-mod   #arogn主题
 - [x] luci-theme-neobird   #适配手机端neobird主题
@@ -52,18 +50,9 @@
   - [x] luci-app-wol   #WOL网络唤醒
   - [x] luci-app-zerotier  #ZeroTier内网穿透
 
-**系统截图**：
 
-<img width="600" alt="openwrt" src="https://m.360buyimg.com/babel/jfs/t1/95862/16/32174/105730/638b6b62E8154b8b5/2acd9f791ba49444.jpg">
-
-## 感谢
-- 源码来源： lede 的 Openwrt 源码仓库 https://github.com/coolsnowwolf/lede
-- 脚本来源： P3TERX 的 使用 GitHub Actions 云编译 OpenWrt https://github.com/P3TERX/Actions-OpenWrt
-- 插件仓库来源：https://github.com/kenzok8/openwrt-packages
-- 应用过滤插件来源：https://github.com/destan19/OpenAppFilter.git
-
-
-**红米AX6S底包**：
-
-- 底包地址：https://www.123pan.com/s/Aq5RVv-xqu4H 提取码:6666
-- 刷机教程：先刷factory.bin再刷sysupgrade.bin
+**红米AX6S/AX6底包**：
+- 刷机教程：
+- 官方固件开启ssh
+- 刷入刷factory.bin （底包不通用）
+- 再刷sysupgrade.bin（不保存配置，刷入）
