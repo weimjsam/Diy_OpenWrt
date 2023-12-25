@@ -2,15 +2,15 @@
 
 **项目说明**：
 - 本项目使用 Github Actions 下载 `Openwrt` 源码仓库，进行云编译。
-- 本项目编译固件后台地址：192.168.1.1 管理员：root  初始密码：password
-
-
+- 本项目编译固件后台地址：192.168.2.1 管理员：root  初始密码：password
+- 默认编译纯净版本，只带了Turbo ACC 网络加速，其余插件一律可以在线安装
+<br>
 **本项目编译的固件额外配置**
 - 主题插件:
 - [x] luci-theme-argon-mod   #arogn主题
 - [x] luci-theme-neobird   #适配手机端neobird主题
 - [x] luci-theme-Opentopd   #sirpdboy的Opentopd主题
-
+<br>
 **集成插件**：
   - [x] luci-app-accesscontrol  #访问时间控制
   - [x] luci-app-advanced  #高级设置
@@ -49,8 +49,7 @@
   - [x] luci-app-webadmin  #Web管理页面设置
   - [x] luci-app-wol   #WOL网络唤醒
   - [x] luci-app-zerotier  #ZeroTier内网穿透
-
-
+<br>
 **红米AX6S/AX6底包**：
 - 刷机教程：
 - 官方固件开启ssh
