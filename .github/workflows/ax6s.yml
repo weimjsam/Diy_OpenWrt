@@ -21,7 +21,7 @@ on:
       patch_filename:
         description: 'Patch Filename'
         required: false
-        default: 'ax6s.patch'
+        default: 'immortalwrtARM/ax6s/ax6s.patch'
 
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrtARM
