@@ -24,7 +24,7 @@ on:
         default: 'immortalwrtARM/ax6s/ax6s.patch'
 
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrtARM
+  REPO_URL: https://github.com/weimjsam/immortalwrtARM
   REPO_BRANCH: mt7622
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: immortalwrtARM/ax6s/ax6s.66.config
