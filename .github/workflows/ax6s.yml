@@ -18,10 +18,6 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-      patch_filename:
-        description: 'Patch Filename'
-        required: false
-        default: 'immortalwrtARM/ax6s/ax6s.patch'
 
 env:
   REPO_URL: https://github.com/weimjsam/immortalwrtARM
@@ -64,12 +60,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
-    - name: Apply patch
-      working-directory: /workdir
-      run: |
-        cd openwrt
-        git apply $GITHUB_WORKSPACE/${{ github.event.inputs.patch_filename }}
 
     - name: Load custom feeds
       run: |
